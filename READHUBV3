@@ -1,0 +1,85 @@
+-- READHUB V1 - Loadstring cho Blox Fruits
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/HoHoHubV5/UI-Library/main/Library.lua"))()
+local Window = Library:CreateWindow("READHUB V1", Vector2.new(500, 400))
+
+-- Logo READHUB
+Window:CreateLabel("🌟 READHUB 🌟")
+
+-- Các chức năng cơ bản (giống HoHoHub v5)
+local Tab = Window:CreateTab("Blox Fruits")
+
+Tab:CreateButton("Auto Farm", function()
+    print("READHUB Auto Farm Actisvated")
+    -- chèn code auto farm ở đây
+end)
+
+Tab:CreateButton("Auto Haki", function()
+    print("READHUB Auto Haki Activated")
+    -- chèn code auto haki ở đây
+end)
+
+Tab:CreateButton("TP to Boss", function()
+    print("READHUB TP to Boss Activated")
+    -- chèn code teleport boss ở đây
+end)
+
+-- Các chức năng khác
+Tab:CreateButton("Auto Level", function()
+    print("READHUB Auto Level Activated")
+    -- code auto level
+end)
+
+print("READHUB Loaded Successfully!")
+-- READHUB UI Template (không chứa logic hack)
+-- Yêu cầu thư viện UI (ví dụ: HoHoHubV5 UI Library)
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/HoHoHubV5/UI-Library/main/Library.lua"))()
+local Window = Library:CreateWindow("READHUB", Vector2.new(520, 480))
+
+-- 🏷 Logo / Header
+Window:CreateLabel("⭐ READHUB by YOU ⭐")
+
+-- 🎮 Main Tab
+local MainTab = Window:CreateTab("Main Functions")
+
+-- ■ Auto‑Feature Toggle
+MainTab:CreateToggle("Auto Feature A", false, function(enabled)
+    getgenv().FeatureA = enabled
+    while getgenv().FeatureA do
+        task.wait(1)
+        -- TODO: Your code here
+        print("Feature A is running...")
+    end
+end)
+
+MainTab:CreateToggle("Auto Feature B", false, function(enabled)
+    getgenv().FeatureB = enabled
+    while getgenv().FeatureB do
+        task.wait(1)
+        -- TODO: Your code here
+        print("Feature B is running...")
+    end
+end)
+
+-- ■ Buttons
+MainTab:CreateButton("Do Action X", function()
+    print("Action X triggered")
+    -- TODO: Your code here
+end)
+
+MainTab:CreateButton("Do Action Y", function()
+    print("Action Y triggered")
+    -- TODO: Your code here
+end)
+
+-- 🛠 Utility Tab
+local UtilTab = Window:CreateTab("Utilities")
+
+UtilTab:CreateButton("Print Status", function()
+    print("Status:", {
+        FeatureA = getgenv().FeatureA,
+        FeatureB = getgenv().FeatureB
+    })
+end)
+
+-- End message
+print("READHUB Template Loaded!")
